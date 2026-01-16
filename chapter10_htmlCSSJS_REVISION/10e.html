@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            font-size: medium;
+            font-family: Arial;
+        }
+        .toggle-button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .is-toggled{
+            background-color: grey;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button  class=" toggle-button js-game "onclick="
+        const button= document.querySelector('.js-game');
+        if(!button.classList.contains('is-toggled')){
+            button.classList.add('is-toggled');
+        }else{
+            button.classList.remove('is-toggled');
+        } 
+        ">Gaming</button>
+
+         <button  class=" toggle-button js-game-2 "onclick="
+        const button= document.querySelector('.js-game-2');
+        if(!button.classList.contains('is-toggled')){
+            button.classList.add('is-toggled');
+        }else{
+            button.classList.remove('is-toggled');
+        } 
+        ">Music</button>
+
+         <button  class="toggle-button js-game-3 "onclick="
+        const button= document.querySelector('.js-game-3');
+        if(!button.classList.contains('is-toggled')){
+            button.classList.add('is-toggled');
+        }else{
+            button.classList.remove('is-toggled');
+        } 
+        ">Tech</button>
+</body>
+</html>

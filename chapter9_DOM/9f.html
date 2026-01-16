@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9g actually</title>
+</head>
+<body>
+    <p>Amazon Shipping Cart</p>
+
+    <input 
+        placeholder= "Enter amount" 
+        class="js-cost-button"
+        onkeydown="handleCostKeydown(event);
+    ">
+   
+    <button onclick= "
+         calculate();
+        ">calculate</button>
+
+        <p class="js-total-cost"></p>
+
+
+    <script>
+        function handleCostKeydown(event){
+            if(event.key === 'Enter'){
+                calculate();
+            }
+        }
+        function calculate(){
+            const inputElement=document.querySelector('.js-cost-button');
+
+            let cost = Number(inputElement.value)*100;
+
+            if (cost < 4000){
+                cost = cost + 1000;
+            }
+
+            document.querySelector('.js-total-cost')
+            .innerHTML=`$${cost / 100}`;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amazon shipping cart</p>
+    <input placeholder="Enter the cost" class="js-input-value" onkeydown="
+    handlekey();
+    ">
+
+    <button onclick="
+        enterThings();
+    " >Calculate</button>
+    <p class="js-button-para"></p>
+
+    <script>
+        function handlekey(){
+            if(event.key=== 'Enter'){
+                enterThings();
+            }
+        }
+        
+        function enterThings(){
+        const inputElement= document.querySelector('.js-input-value');
+        let cost = Number(inputElement.value);
+
+        if(cost< 10){
+            cost += 10;
+        }
+        document.querySelector('.js-button-para').innerHTML= ` $${cost % 100}`;
+    }
+    </script>
+</body>
+</html>

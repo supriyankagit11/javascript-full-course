@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter your name" class="js-placeholder">
+
+    <button onclick="
+    const inputElement= document.querySelector('.js-placeholder');
+    document.querySelector('.js-para').innerHTML = `your name is ${inputElement.value}`;
+    ">Submit</button>
+    <P class="js-para"></P>
+    
+</body>
+</html>

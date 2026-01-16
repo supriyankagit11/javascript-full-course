@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<input placeholder="Name" class="js-button-ok">
+
+<button onclick="
+ const inputElement = document.querySelector('.js-button-ok');
+ document.querySelector('.js-message')
+ .innerHTML = `your name is :${inputElement.value}`;
+ ">submit</button>
+
+ <P class="js-message"></P>
+</script>
+</body>
+</html>
